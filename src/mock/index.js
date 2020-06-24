@@ -7,7 +7,7 @@ Mock.mock(/\/login/, "post", req => {
       return success({
         id: 1,
         name: "一地芒草",
-        premission: ["p_home"].concat(permission)
+        premission: ["p_home", "p_test"].concat(permission)
       });
     } else {
       return error("用户名或密码错误");

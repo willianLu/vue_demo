@@ -10,6 +10,7 @@ import Login from "@/views/login";
 import NoFound from "@/views/404";
 import User from "@/views/home/user";
 import About from "@/views/home/about";
+import Test from "@/views/home/test";
 
 Vue.use(Router);
 
@@ -57,6 +58,13 @@ const asyncRouterMap = [
     title: "关于我们",
     name: "about",
     component: About
+  },
+  {
+    path: "/home/test",
+    permission: "p_test",
+    title: "虚拟滚轮",
+    name: "test",
+    component: Test
   }
 ];
 
