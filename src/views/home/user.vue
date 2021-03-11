@@ -22,8 +22,30 @@ export default {
       data: []
     };
   },
+  beforeCreate() {
+    console.log('parent--------------beforeCreate')
+  },
   created() {
     this.data = this.createData();
+    console.log('parent--------------created')
+  },
+  beforeMount() {
+    console.log('parent--------------beforeMount')
+  },
+  mounted() {
+    console.log('parent--------------mounted')
+  },
+  beforeUpdate() {
+    console.log('parent--------------beforeUpdate')
+  },
+  updated() {
+    console.log('parent--------------updated')
+  },
+  beforeDestroy() {
+    console.log('parent--------------beforeDestroy')
+  },
+  destroyed() {
+    console.log('parent--------------destroyed')
   },
   methods: {
     createData(num = 100000) {

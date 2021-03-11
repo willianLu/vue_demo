@@ -12,14 +12,19 @@
       <input type="file" @change="handleFileChange" />
       <el-button @click="handleUpload">上传</el-button>
     </div>
+    <functional name="张三"></functional>
   </div>
 </template>
 
 <script>
+import Functional from '@/components/functional';
 import { uploadAsync } from "@/api";
 const LENGTH = 10;
 export default {
   name: "home",
+  components: {
+    Functional
+  },
   data() {
     return {
       name: "",
