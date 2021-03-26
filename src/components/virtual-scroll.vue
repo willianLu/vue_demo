@@ -4,6 +4,7 @@
     @scroll="handleScroll"
     ref="vs"
   >
+   <button style="position:absoult;top:0;right:0;" @click="$emit('update:height', height + 1)">测试{{height}}</button>
     <div :style="`height:${offsetTop}px`"></div>
     <div
       v-for="item in list"

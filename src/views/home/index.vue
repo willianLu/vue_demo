@@ -34,7 +34,22 @@ export default {
       fileList: []
     };
   },
-  created() {},
+  watch: {
+    name: {
+      handler() {
+        console.log(...arguments, '--------watch');
+      },
+      sync: true
+    }
+  },
+  created() {
+    setTimeout(() => {
+      this.$nextTick(() => {
+        console.log('------------nexttick');
+      })
+      this.name = 'kkk';
+    }, 0)
+  },
   methods: {
     handleFileChange(e) {
       const [file] = e.target.files;

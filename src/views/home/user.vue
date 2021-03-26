@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <h1>我是user</h1>
+    <h1>我是user{{height}}</h1>
     <VirtualScroll
       :data="data"
-      :height="500"
+      :height.sync="height"
     >
       <div slot-scope="{data}">{{data}}</div>
     </VirtualScroll>
@@ -19,7 +19,8 @@ export default {
   },
   data() {
     return {
-      data: []
+      data: [],
+      height: 500
     };
   },
   beforeCreate() {
@@ -48,7 +49,7 @@ export default {
     console.log('parent--------------destroyed')
   },
   methods: {
-    createData(num = 100000) {
+    createData(num = 1000) {
       let arr = [];
       while (arr.length < num) {
         arr.push(arr.length + 1);
